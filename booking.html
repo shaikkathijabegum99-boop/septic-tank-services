@@ -1,0 +1,302 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ClearFlow | Book Septic Service</title>
+
+    <link
+        rel="icon"
+        href="Images/favicon-32x32.png"
+        type="image/png"
+        sizes="32x32">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link
+        rel="stylesheet"
+        href="css/index.css">
+
+    <link
+        rel="stylesheet"
+        href="css/booking.css">
+
+</head>
+
+<body class="dark">
+
+    <main class="booking-page">
+
+        <div
+            class="booking-modal active"
+            id="bookingModal"
+            aria-hidden="false">
+
+            <div
+                class="booking-modal-overlay"
+                id="bookingOverlay">
+            </div>
+
+            <div
+                class="booking-modal-box"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="bookingModalTitle">
+
+                <a
+                    href="index.html"
+                    class="booking-modal-close"
+                    id="closeBooking"
+                    aria-label="Back to home">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </a>
+
+                <div class="booking-modal-header">
+
+                    <span class="eyebrow">
+                        QUICK BOOKING
+                    </span>
+
+                    <h2 id="bookingModalTitle">
+                        Book Your
+                        <span>Septic Service.</span>
+                    </h2>
+
+                    <p>
+                        Tell us what you need and our team
+                        will help arrange your service.
+                    </p>
+
+                </div>
+
+                <form
+                    class="booking-popup-form"
+                    id="bookingPopupForm">
+
+                    <div class="booking-form-grid">
+
+                        <div class="form-group">
+
+                            <label for="popupName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="popupName"
+                                name="name"
+                                placeholder="Your full name"
+                                autocomplete="name"
+                                required>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="popupPhone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="popupPhone"
+                                name="phone"
+                                placeholder="Your phone number"
+                                autocomplete="tel"
+                                required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="popupEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="popupEmail"
+                            name="email"
+                            placeholder="Your email address"
+                            autocomplete="email">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="popupService">
+                            Service Needed
+                        </label>
+
+                        <select
+                            id="popupService"
+                            name="service"
+                            required>
+
+                            <option value="">
+                                Select a service
+                            </option>
+
+                            <option value="pumping">
+                                Septic Tank Pumping
+                            </option>
+
+                            <option value="inspection">
+                                Tank Inspection
+                            </option>
+
+                            <option value="maintenance">
+                                Routine Maintenance
+                            </option>
+
+                            <option value="repair">
+                                Septic Tank Repair
+                            </option>
+
+                            <option value="emergency">
+                                Emergency Service
+                            </option>
+
+                            <option value="cleaning">
+                                System Cleaning
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="popupAddress">
+                            Service Address
+                        </label>
+
+                        <input
+                            type="text"
+                            id="popupAddress"
+                            name="address"
+                            placeholder="Enter service address"
+                            autocomplete="street-address"
+                            required>
+
+                    </div>
+
+                    <div class="booking-form-grid">
+
+                        <div class="form-group">
+
+                            <label for="popupDate">
+                                Preferred Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="popupDate"
+                                name="date">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="popupTime">
+                                Preferred Time
+                            </label>
+
+                            <select
+                                id="popupTime"
+                                name="time">
+
+                                <option value="">
+                                    Select time
+                                </option>
+
+                                <option value="morning">
+                                    Morning
+                                </option>
+
+                                <option value="afternoon">
+                                    Afternoon
+                                </option>
+
+                                <option value="evening">
+                                    Evening
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="popupDetails">
+                            Service Details
+                        </label>
+
+                        <textarea
+                            id="popupDetails"
+                            name="details"
+                            rows="3"
+                            placeholder="Briefly describe your septic issue..."></textarea>
+
+                    </div>
+
+                    <label class="booking-urgent">
+
+                        <input
+                            type="checkbox"
+                            name="urgent">
+
+                        <span>
+                            This is an urgent service request
+                        </span>
+
+                    </label>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary booking-submit">
+
+                        Request Service
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                    <p class="booking-privacy">
+                        Your information is used only to respond
+                        to your service request.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+ <script src="js/index.js"></script>
+    <script src="js/booking.js"></script>
+
+</body>
+
+</html>

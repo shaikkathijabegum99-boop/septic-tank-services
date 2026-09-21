@@ -1,0 +1,1179 @@
+ 
+/* =========================================================
+   SERVICE DETAIL 1 — SEPTIC TANK PUMPING
+   ========================================================= */
+
+
+/* =========================================================
+   COMMON
+   ========================================================= */
+
+.service-detail-hero,
+.service-detail-importance,
+.service-detail-included,
+.service-detail-timing,
+.service-detail-final-cta {
+    position:relative;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.service-detail-hero {
+    min-height:520px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+}
+
+.service-detail-hero-image {
+    position:absolute;
+    inset:0;
+}
+
+.service-detail-hero-image img {
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+}
+
+.service-detail-hero-overlay {
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7,26,29,.96) 0%,
+            rgba(7,26,29,.84) 45%,
+            rgba(7,26,29,.30) 100%
+        );
+}
+
+.service-detail-hero-content {
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:720px;
+}
+
+.service-detail-hero-content h1 {
+    margin:0 0 22px;
+    color:#F4FBFA;
+    font-family:var(--display);
+    font-size:clamp(2.8rem,3.5vw,3.5rem);
+    line-height:1;
+    letter-spacing:-3px;
+}
+
+.service-detail-hero-content h1 span {
+    display:block;
+    color:var(--secondary);
+}
+
+.service-detail-hero-content p {
+    max-width:650px;
+    margin:0 0 30px;
+    color:#C6D7D6;
+    font-size:15px;
+    line-height:1.8;
+}
+
+.service-detail-hero-actions {
+    display:flex;
+    align-items:center;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+
+/* =========================================================
+   IMPORTANCE / OVERVIEW
+   ========================================================= */
+
+.service-detail-importance {
+    padding:90px 0;
+    background:var(--section-bg);
+}
+
+.service-detail-importance-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.service-detail-importance-image {
+    height:560px;
+    overflow:hidden;
+    border-radius:var(--radius-lg);
+}
+
+.service-detail-importance-image img {
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    transition:transform .5s ease;
+}
+
+.service-detail-importance-image:hover img {
+    transform:scale(1.025);
+}
+
+.service-detail-importance-content {
+    max-width:570px;
+}
+
+.service-detail-importance-content h2 {
+    margin:0 0 18px;
+    color:var(--text);
+    font-family:var(--display);
+    font-size:2.2rem;
+    line-height:1.08;
+    letter-spacing:-1.8px;
+}
+
+.service-detail-importance-content h2 span {
+    display:block;
+    color:var(--secondary);
+}
+
+.service-detail-importance-content > p {
+    margin:0 0 18px;
+    color:var(--text-muted);
+    font-size:14px;
+    line-height:1.8;
+}
+
+.importance-points {
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    margin-top:28px;
+}
+
+.importance-point {
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    padding-bottom:18px;
+    border-bottom:1px solid var(--border);
+}
+
+.importance-point:last-child {
+    padding-bottom:0;
+    border-bottom:0;
+}
+
+.importance-point > i {
+    flex:0 0 auto;
+    margin-top:3px;
+    color:var(--secondary);
+    font-size:15px;
+}
+
+.importance-point h3 {
+    margin:0 0 5px;
+    color:var(--text);
+    font-family:var(--display);
+    font-size:16px;
+    line-height:1.3;
+}
+
+.importance-point p {
+    margin:0;
+    color:var(--text-muted);
+    font-size:12px;
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   WHAT'S INCLUDED
+   ========================================================= */
+
+.service-detail-included {
+    padding:90px 0;
+    background:var(--section-alt-bg);
+}
+
+.service-detail-section-head {
+    max-width:700px;
+    margin:0 auto 50px;
+    text-align:center;
+}
+
+.service-detail-section-head h2 {
+    margin:0 0 17px;
+    color:var(--text);
+    font-family:var(--display);
+    font-size:2.2rem;
+    line-height:1.08;
+    letter-spacing:-1.8px;
+}
+
+.service-detail-section-head h2 span {
+    display:block;
+    color:var(--secondary);
+}
+
+.service-detail-section-head p {
+    max-width:650px;
+    margin:0 auto;
+    color:var(--text-muted);
+    font-size:14px;
+    line-height:1.8;
+}
+
+
+
+
+.included-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.included-card {
+    position:relative;
+    min-height:270px;
+    padding:30px 24px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    border-radius:22px;
+    background:var(--surface);
+    box-shadow:var(--shadow-card);
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.included-card:hover {
+    transform:translateY(-6px);
+    border-color:rgba(24,169,153,.30);
+    box-shadow:
+        0 16px 38px rgba(24,169,153,.24);
+}
+
+.included-card-icon {
+    width:46px;
+    height:46px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:25px;
+    border:1px solid var(--border);
+    border-radius:13px;
+    color:var(--secondary);
+    background:var(--tint);
+    font-size:16px;
+}
+
+.included-number {
+    position:absolute;
+    top:25px;
+    right:22px;
+    color:var(--text-faint);
+    font-family:var(--mono);
+    font-size:10px;
+}
+
+.included-card h3 {
+    margin:0 0 10px;
+    color:var(--text);
+    font-family:var(--display);
+    font-size:17px;
+    line-height:1.3;
+}
+
+.included-card p {
+    margin:0;
+    color:var(--text-muted);
+    font-size:12px;
+    line-height:1.75;
+}
+
+
+
+
+.service-detail-note {
+    max-width:900px;
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    margin:35px auto 0;
+    padding:20px 22px;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:var(--surface);
+}
+
+.service-detail-note > i {
+    flex:0 0 auto;
+    margin-top:3px;
+    color:var(--secondary);
+    font-size:14px;
+}
+
+.service-detail-note p {
+    margin:0;
+    color:var(--text-muted);
+    font-size:12px;
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   TIMING / SIGNS
+   ========================================================= */
+
+.service-detail-timing {
+    padding:90px 0;
+    background:var(--bg);
+}
+
+.service-detail-timing-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.service-detail-timing-content {
+    max-width:570px;
+}
+
+.service-detail-timing-content h2 {
+    margin:0 0 18px;
+    color:var(--text);
+    font-family:var(--display);
+    font-size:2.2rem;
+    line-height:1.08;
+    letter-spacing:-1.8px;
+}
+
+.service-detail-timing-content h2 span {
+    display:block;
+    color:var(--secondary);
+}
+
+.service-detail-timing-content > p {
+    margin:0 0 17px;
+    color:var(--text-muted);
+    font-size:14px;
+    line-height:1.8;
+}
+
+.timing-list {
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    margin-top:30px;
+}
+
+.timing-item {
+    display:grid;
+    grid-template-columns:42px 1fr;
+    gap:15px;
+    padding:17px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.timing-item:first-child {
+    border-top:1px solid var(--border);
+}
+
+.timing-item > span {
+    color:var(--secondary);
+    font-family:var(--mono);
+    font-size:11px;
+    padding-top:3px;
+}
+
+.timing-item strong {
+    display:block;
+    margin-bottom:4px;
+    color:var(--text);
+    font-family:var(--display);
+    font-size:15px;
+}
+
+.timing-item p {
+    margin:0;
+    color:var(--text-muted);
+    font-size:12px;
+    line-height:1.65;
+}
+
+.service-detail-timing-image {
+    height:560px;
+    overflow:hidden;
+    border-radius:var(--radius-lg);
+}
+
+.service-detail-timing-image img {
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    transition:transform .5s ease;
+}
+
+.service-detail-timing-image:hover img {
+    transform:scale(1.025);
+}
+
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.service-detail-final-cta {
+    min-height:560px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+}
+
+.service-detail-cta-image {
+    position:absolute;
+    inset:0;
+}
+
+.service-detail-cta-image img {
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+}
+
+.service-detail-cta-overlay {
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7,26,29,.96) 0%,
+            rgba(7,26,29,.82) 48%,
+            rgba(7,26,29,.34) 100%
+        );
+}
+
+.service-detail-cta-content {
+    position:relative;
+    z-index:2;
+    max-width:700px;
+    padding:90px 0;
+}
+
+.service-detail-cta-content h2 {
+    margin:0 0 20px;
+    color:#F4FBFA;
+    font-family:var(--display);
+    font-size:clamp(2.8rem,3.5vw,3.5rem);
+    line-height:1.08;
+    letter-spacing:-1.8px;
+}
+
+.service-detail-cta-content h2 span {
+    display:block;
+    color:var(--secondary);
+}
+
+.service-detail-cta-content p {
+    max-width:620px;
+    margin:0 0 30px;
+    color:#C6D7D6;
+    font-size:14px;
+    line-height:1.8;
+}
+
+.service-detail-cta-actions {
+    display:flex;
+    align-items:center;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+
+/* =========================================================
+   LIGHT MODE
+   ========================================================= */
+
+body.light .service-detail-hero-overlay {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7,26,29,.88) 0%,
+            rgba(7,26,29,.70) 48%,
+            rgba(7,26,29,.28) 100%
+        );
+}
+
+body.light .service-detail-cta-overlay {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7,26,29,.90) 0%,
+            rgba(7,26,29,.74) 50%,
+            rgba(7,26,29,.30) 100%
+        );
+}
+
+body.light .included-card:hover {
+    border-color:rgba(21,156,141,.30);
+}
+
+
+/* =========================================================
+   TABLET
+   640px - 1023px
+   ========================================================= */
+
+@media (min-width:640px) and (max-width:1023px) {
+
+    .service-detail-hero {
+        min-height:620px;
+    }
+
+    .service-detail-hero-content {
+        max-width:650px;
+    }
+
+    .service-detail-importance-grid,
+    .service-detail-timing-grid {
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .service-detail-importance-image,
+    .service-detail-timing-image {
+        height:430px;
+    }
+
+    .service-detail-importance-content,
+    .service-detail-timing-content {
+        max-width:100%;
+    }
+
+    .included-grid {
+        grid-template-columns:repeat(2,1fr);
+        gap:18px;
+    }
+
+    .included-card {
+        min-height:245px;
+    }
+
+    .service-detail-final-cta {
+        min-height:520px;
+    }
+
+}
+
+
+/* =========================================================
+   DESKTOP
+   1024px - 1279px
+   ========================================================= */
+
+@media (min-width:1024px) and (max-width:1279px) {
+
+    .service-detail-hero {
+        min-height:650px;
+    }
+
+    .service-detail-hero-content {
+        max-width:650px;
+    }
+
+    .service-detail-importance-grid,
+    .service-detail-timing-grid {
+        gap:50px;
+    }
+
+    .service-detail-importance-image,
+    .service-detail-timing-image {
+        height:500px;
+    }
+
+    .included-grid {
+        gap:18px;
+    }
+
+    .included-card {
+        padding:26px 22px;
+    }
+
+    .service-detail-importance-content h2,
+    .service-detail-timing-content h2,
+    .service-detail-section-head h2 {
+        font-size:2.05rem;
+    }
+
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1280px+
+   ========================================================= */
+
+@media (min-width:1280px) {
+
+   
+
+    .service-detail-importance-grid,
+    .service-detail-timing-grid {
+        gap:80px;
+    }
+
+    .service-detail-importance-image,
+    .service-detail-timing-image {
+        height:570px;
+    }
+
+    .included-grid {
+        gap:24px;
+    }
+
+    .included-card {
+        padding:32px 26px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   Below 640px
+   ========================================================= */
+
+@media (max-width:639px) {
+
+    
+
+    .service-detail-hero {
+        min-height:620px;
+        text-align:center;
+    }
+
+    .service-detail-hero-overlay {
+        background:rgba(7,26,29,.83);
+    }
+
+    .service-detail-hero-content {
+        max-width:100%;
+        margin:0 auto;
+    }
+
+    .service-detail-hero-content h1 {
+        font-size:44px;
+        line-height:1.02;
+        letter-spacing:-1.8px;
+    }
+
+    .service-detail-hero-content p {
+        max-width:600px;
+        margin:0 auto 28px;
+        font-size:13px;
+        line-height:1.7;
+    }
+
+    .service-detail-hero-actions {
+        justify-content:center;
+    }
+
+
+    
+
+    .service-detail-importance,
+    .service-detail-included,
+    .service-detail-timing {
+        padding:60px 0;
+    }
+
+
+    
+
+    .service-detail-importance-grid {
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .service-detail-importance-image {
+        height:320px;
+        border-radius:24px;
+    }
+
+    .service-detail-importance-content {
+        max-width:100%;
+    }
+
+    .service-detail-importance-content h2,
+    .service-detail-timing-content h2,
+    .service-detail-section-head h2 {
+        font-size:32px;
+        line-height:1.08;
+        letter-spacing:-1px;
+    }
+
+    .service-detail-importance-content > p,
+    .service-detail-timing-content > p,
+    .service-detail-section-head p {
+        font-size:13px;
+        line-height:1.75;
+    }
+
+    .importance-points {
+        gap:17px;
+        margin-top:25px;
+    }
+
+    .importance-point {
+        gap:12px;
+    }
+
+    .importance-point h3 {
+        font-size:15px;
+    }
+
+    .importance-point p {
+        font-size:11.5px;
+    }
+
+
+    
+
+    .service-detail-section-head {
+        margin-bottom:38px;
+    }
+
+    .included-grid {
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .included-card {
+        min-height:auto;
+        padding:25px 22px;
+    }
+
+    .included-card-icon {
+        width:42px;
+        height:42px;
+        margin-bottom:20px;
+    }
+
+    .included-card h3 {
+        font-size:16px;
+    }
+
+    .included-card p {
+        font-size:12px;
+    }
+
+    .service-detail-note {
+        margin-top:25px;
+        padding:17px;
+    }
+
+    .service-detail-note p {
+        font-size:11.5px;
+    }
+
+
+    
+
+    .service-detail-timing-grid {
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .service-detail-timing-content {
+        max-width:100%;
+    }
+
+    .timing-list {
+        margin-top:25px;
+    }
+
+    .timing-item {
+        grid-template-columns:35px 1fr;
+        gap:12px;
+        padding:15px 0;
+    }
+
+    .timing-item strong {
+        font-size:14px;
+    }
+
+    .timing-item p {
+        font-size:11.5px;
+    }
+
+    .service-detail-timing-image {
+        height:320px;
+        border-radius:24px;
+    }
+
+
+    
+
+    .service-detail-final-cta {
+        min-height:540px;
+        text-align:center;
+    }
+
+    .service-detail-cta-overlay {
+        background:rgba(7,26,29,.80);
+    }
+
+    .service-detail-cta-content {
+        max-width:100%;
+        padding:70px 0;
+        margin:0 auto;
+    }
+
+    .service-detail-cta-content h2 {
+        font-size:32px;
+        line-height:1.08;
+        letter-spacing:-1px;
+    }
+
+    .service-detail-cta-content p {
+        margin-left:auto;
+        margin-right:auto;
+        font-size:13px;
+        line-height:1.75;
+    }
+
+    .service-detail-cta-actions {
+        justify-content:center;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   Below 480px
+   ========================================================= */
+
+@media (max-width:480px) {
+
+    .service-detail-hero {
+        min-height:600px;
+    }
+
+    .service-detail-hero-content h1 {
+        font-size:39px;
+        letter-spacing:-1.5px;
+    }
+
+    .service-detail-importance,
+    .service-detail-included,
+    .service-detail-timing {
+        padding:55px 0;
+    }
+
+    .service-detail-importance-content h2,
+    .service-detail-timing-content h2,
+    .service-detail-section-head h2,
+    .service-detail-cta-content h2 {
+        font-size:29px;
+        letter-spacing:-.8px;
+    }
+
+    .service-detail-importance-image,
+    .service-detail-timing-image {
+        height:270px;
+    }
+
+    .service-detail-importance-content > p,
+    .service-detail-timing-content > p,
+    .service-detail-section-head p {
+        font-size:12px;
+    }
+
+    .importance-point h3 {
+        font-size:14px;
+    }
+
+    .importance-point p {
+        font-size:11px;
+    }
+
+    .included-card {
+        padding:22px 20px;
+    }
+
+    .included-card h3 {
+        font-size:15px;
+    }
+
+    .included-card p {
+        font-size:11.5px;
+    }
+
+    .service-detail-note {
+        align-items:flex-start;
+        padding:15px;
+    }
+
+    .service-detail-note p {
+        font-size:11px;
+    }
+
+    .timing-item strong {
+        font-size:13px;
+    }
+
+    .timing-item p {
+        font-size:11px;
+    }
+
+    .service-detail-final-cta {
+        min-height:520px;
+    }
+
+    .service-detail-cta-content {
+        padding:60px 0;
+    }
+
+    .service-detail-cta-content p {
+        font-size:12px;
+    }
+
+    .service-detail-cta-actions {
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .service-detail-cta-actions .btn {
+        width:100%;
+        justify-content:center;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   Below 380px
+   ========================================================= */
+
+@media (max-width:379px) {
+
+    .service-detail-hero-content h1 {
+        font-size:35px;
+    }
+
+    .service-detail-importance-content h2,
+    .service-detail-timing-content h2,
+    .service-detail-section-head h2,
+    .service-detail-cta-content h2 {
+        font-size:27px;
+    }
+
+    .service-detail-importance-image,
+    .service-detail-timing-image {
+        height:240px;
+    }
+
+}
+
+.service-detail-hero {
+    min-height: 440px;
+}
+
+.service-detail-hero-content {
+    padding: 55px 0;
+}
+
+
+@media (min-width: 640px) and (max-width: 1023px) {
+    .service-detail-hero {
+        min-height: 500px;
+    }
+
+    .service-detail-hero-content {
+        padding: 50px 0;
+    }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .service-detail-hero {
+        min-height: 520px;
+    }
+
+    .service-detail-hero-content {
+        padding: 45px 0;
+    }
+}
+
+
+@media (min-width: 1280px) {
+    .service-detail-hero {
+        min-height: 500px;
+    }
+
+    .service-detail-hero-content {
+        padding: 40px 0;
+    }
+}
+
+
+@media (max-width: 639px) {
+    .service-detail-hero {
+        min-height: 500px;
+    }
+
+    .service-detail-hero-content {
+        padding: 40px 0;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .service-detail-hero {
+        min-height: 480px;
+    }
+
+    .service-detail-hero-content {
+        padding: 35px 0;
+    }
+}
+
+
+@media (max-width: 379px) {
+    .service-detail-hero {
+        min-height: 450px;
+    }
+
+    .service-detail-hero-content {
+        padding: 30px 0;
+    }
+}.included-grid {
+    justify-items: center;
+}
+
+.included-card {
+    width: 100%;
+    text-align: center;
+}
+
+.included-card-icon {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.included-number {
+    right: 22px;
+}
+
+.service-detail-note {
+    text-align: center;
+}
+
+@media (max-width: 639px) {
+    .included-card {
+        text-align: center;
+    }
+
+    .included-card-icon {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.service-detail-final-cta {
+    min-height: 440px;
+}
+
+.service-detail-cta-content {
+    padding: 55px 0;
+}
+
+
+@media (min-width: 640px) and (max-width: 1023px) {
+
+    .service-detail-final-cta {
+        min-height: 460px;
+    }
+
+    .service-detail-cta-content {
+        padding: 50px 0;
+    }
+
+}
+
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+    .service-detail-final-cta {
+        min-height: 470px;
+    }
+
+    .service-detail-cta-content {
+        padding: 45px 0;
+    }
+
+}
+
+
+@media (min-width: 1280px) {
+
+    .service-detail-final-cta {
+        min-height: 450px;
+    }
+
+    .service-detail-cta-content {
+        padding: 40px 0;
+    }
+
+}
+
+
+@media (max-width: 639px) {
+
+    .service-detail-final-cta {
+        min-height: 440px;
+    }
+
+    .service-detail-cta-content {
+        padding: 50px 0;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .service-detail-final-cta {
+        min-height: 420px;
+    }
+
+    .service-detail-cta-content {
+        padding: 40px 0;
+    }
+
+}
+
+
+@media (max-width: 379px) {
+
+    .service-detail-final-cta {
+        min-height: 400px;
+    }
+
+    .service-detail-cta-content {
+        padding: 35px 0;
+    }
+
+}
