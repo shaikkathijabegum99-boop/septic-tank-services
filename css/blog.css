@@ -977,7 +977,7 @@ body.light .maintenance-cta-overlay{
     .maintenance-cta-content p{
         font-size:13px;
     }
-
+/*
     body.light .maintenance-hero-overlay{
         background:
             linear-gradient(
@@ -996,7 +996,7 @@ body.light .maintenance-cta-overlay{
                 rgba(243,248,247,.88) 65%,
                 rgba(243,248,247,.98) 100%
             );
-    }
+    }*/
 }
 
 @media (max-width:480px){
@@ -1540,7 +1540,7 @@ body.light .dos-item{
     }
 }.maintenance-system-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+   
     gap: 22px;
 }
 

@@ -478,7 +478,7 @@ nav.wrap{
   font-weight:700;
   font-size:1.05rem;
 
-  color:var(--text);
+  color:var(--secondary);
 
   justify-content:flex-start;
   flex:none;
@@ -609,11 +609,11 @@ nav.wrap{
 
   background:none;
 
-  border:1px solid var(--border);
+  border:1px solid var(--secondary);
 
   font-size:1rem;
 
-  color:var(--text);
+  color:var(--secondary);
 
   cursor:pointer;
 
@@ -1366,7 +1366,7 @@ body[dir="rtl"] .footer-col a:hover{
    ========================================================= */
 
 .gutter-hero{
-    min-height:620px;
+    min-height:520px;
     display:flex;
     align-items:center;
     
@@ -1490,7 +1490,7 @@ body[dir="rtl"] .footer-col a:hover{
     position:relative;
     z-index:1;
     width:100%;
-    height:540px;
+    height:440px;
     display:block;
     object-fit:cover;
     border-radius:23px;
@@ -3769,4 +3769,57 @@ color:black;
         max-width:300px;
     }
 
+}.trust-content h2 {
+    margin-bottom: 24px;
+}
+
+.trust-content p {
+    margin-bottom: 16px;
+    line-height: 1.8;
+}.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.footer-legal a {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.footer-legal a:hover {
+    color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+    .footer-bottom {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 14px;
+    }
+
+    .footer-legal {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}.footer-socials {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }

@@ -1042,4 +1042,8 @@ body.light .service-card:hover {
 }
 body:not(.dark) .btn-outline {
     color: #ffffff;
+}.services-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
