@@ -846,7 +846,7 @@ body.dark .cta-banner .btn-primary{
 
 .cta-banner .btn-outline{
   border-color:#FFFFFF;
-  color:#FFFFFF;
+ 
 }
 
 
@@ -3436,7 +3436,7 @@ body:not(.dark) .eyebrow::before{
 
 .btn,
 .btn-primary,
-.btn-outline,
+
 .btn-ghost,
 .btn-login,
 .gutter-hero-actions .btn,
@@ -3604,18 +3604,19 @@ body:not(.dark) .eyebrow::before{
     min-width:120px;
     height:40px;
     min-height:40px;
-color:black;
+
     padding:9px 22px;
 }
 
-
+.body.body.ligh.cta-actions .btn-outline{
+    color:black;
+}
 /* =========================================================
    TRUST / GALLERY / CTA BUTTONS
    ========================================================= */
 
 .trust-content .btn,
-.gallery-info .btn,
-.cta-actions .btn {
+.gallery-info .btn {
 
     min-width:120px;
     height:40px;
