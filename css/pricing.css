@@ -62,8 +62,8 @@
     margin-top:30px;
 }
 
-.btn-outline{
-    color:#ffffff;
+.pricing-cta-actions .btn-outline{
+    color:white;
 }
 .pricing-pumping{
     padding:90px 0;
@@ -471,6 +471,7 @@
     gap:12px;
     margin-top:28px;
 }
+
 
 @media (max-width:1280px){
 
@@ -892,7 +893,7 @@
 
 .maintenance-price-card .btn{
     align-self:center;
-    color:black;
+  
 }
 
 @media (max-width:639px){

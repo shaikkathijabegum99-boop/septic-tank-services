@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ClearFlow | Page Not Found</title>
+
+    <link
+        rel="icon"
+        href="Images/favicon-32x32.png"
+        type="image/png"
+        sizes="32x32">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link
+        rel="stylesheet"
+        href="css/index.css">
+
+    <style>
+
+        /* ================================
+           404 PAGE
+        ================================= */
+
+        .error-page {
+            min-height: 100vh;
+            min-height: 100svh;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg);
+            color: var(--text);
+            overflow: hidden;
+        }
+
+        .error-top {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 90px;
+            padding: 25px 6vw;
+        }
+
+        /* LOGO */
+
+        .error-logo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: var(--secondary);
+            text-decoration: none;
+            font-family: var(--display);
+            font-size: 1.15rem;
+            font-weight: 700;
+            transition:
+                color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .error-logo:hover {
+            color: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .error-logo-mark {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: var(--secondary);
+            color: #fff;
+            font-size: 1rem;
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease;
+        }
+
+        .error-logo:hover .error-logo-mark {
+            transform: rotate(-5deg) scale(1.05);
+            background: var(--secondary-deep);
+        }
+
+        /* ACTIONS */
+
+        .error-actions {
+            position: absolute;
+            right: 6vw;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .error-actions .lang-pill,
+        .error-actions .theme-toggle {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            background: var(--surface);
+            color: var(--text);
+            cursor: pointer;
+            transition:
+                color 0.25s ease,
+                background 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .error-actions .lang-pill:hover,
+        .error-actions .theme-toggle:hover {
+            color: #fff;
+            background: var(--secondary);
+            border-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        /* CONTENT */
+
+        .error-content {
+            flex: 1;
+            width: min(100% - 32px, 900px);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 0 80px;
+        }
+
+        .error-inner {
+            width: 100%;
+            max-width: 760px;
+        }
+
+        .error-icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            background: var(--surface);
+            color: var(--secondary);
+            font-size: 2rem;
+            box-shadow: var(--shadow-card);
+            animation: errorFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes errorFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+        }
+
+        .error-code {
+            margin: 0;
+            color: var(--secondary);
+            font-family: var(--display);
+            font-size: clamp(6rem, 18vw, 12rem);
+            font-weight: 700;
+            line-height: 0.85;
+            letter-spacing: -0.08em;
+        }
+
+        .error-title {
+            margin: 30px 0 16px;
+            color: var(--primary);
+            font-family: var(--display);
+            font-size: clamp(2rem, 4vw, 3.4rem);
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+        }
+
+        .error-title span {
+            color: var(--secondary);
+        }
+
+        .error-text {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .error-actions-main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .error-actions-main .btn {
+            min-width: 145px;
+        }
+
+        /* FOOTER */
+
+        .error-footer {
+            padding: 20px 6vw 28px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .error-footer p {
+            margin: 0;
+            color: var(--text-faint);
+            font-size: 0.78rem;
+        }
+
+        /* RTL */
+
+        html[dir="rtl"] .error-actions {
+            right: auto;
+            left: 6vw;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 640px) {
+
+            .error-top {
+                min-height: 75px;
+                padding: 18px 20px;
+            }
+
+            .error-logo {
+                font-size: 1rem;
+            }
+
+            .error-logo-mark {
+                width: 36px;
+                height: 36px;
+                border-radius: 10px;
+            }
+
+            .error-actions {
+                right: 20px;
+                gap: 6px;
+            }
+
+            html[dir="rtl"] .error-actions {
+                right: auto;
+                left: 20px;
+            }
+
+            .error-actions .lang-pill,
+            .error-actions .theme-toggle {
+                width: 36px;
+                height: 36px;
+                min-width: 36px;
+            }
+
+            .error-content {
+                padding: 30px 0 50px;
+            }
+
+            .error-icon {
+                width: 72px;
+                height: 72px;
+                margin-bottom: 22px;
+                border-radius: 22px;
+                font-size: 1.5rem;
+            }
+
+            .error-code {
+                font-size: clamp(5rem, 28vw, 8rem);
+            }
+
+            .error-title {
+                margin-top: 24px;
+                font-size: 2rem;
+            }
+
+            .error-text {
+                font-size: 0.9rem;
+                line-height: 1.7;
+            }
+
+            .error-actions-main {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .error-actions-main .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="dark">
+
+    <main class="error-page">
+
+        <!-- TOP -->
+
+        <header class="error-top">
+
+            <a
+                href="index.html"
+                class="error-logo"
+                aria-label="ClearFlow Septic Home">
+
+                <span class="error-logo-mark">
+                    <i class="fa-solid fa-faucet-drip"></i>
+                </span>
+
+                ClearFlow Septic
+
+            </a>
+
+
+            <div class="error-actions">
+
+                <button
+                    id="langToggle"
+                    class="lang-pill"
+                    type="button"
+                    aria-label="Toggle text direction">
+
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                </button>
+
+
+                <button
+                    id="themeToggle"
+                    class="theme-toggle"
+                    type="button"
+                    aria-label="Toggle dark mode">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+            </div>
+
+      </header>
+
+
+        <!-- CONTENT -->
+
+        <section class="error-content">
+
+            <div class="error-inner">
+
+                <div class="error-icon">
+
+                    <i class="fa-solid fa-faucet-drip"></i>
+
+                </div>
+
+
+                <p class="error-code">
+                    404
+                </p>
+
+
+                <h1 class="error-title">
+                    This Page Took a
+                    <span>Wrong Turn.</span>
+                </h1>
+
+
+                <p class="error-text">
+                    The page you're looking for may have been
+                    moved, removed, or the address may be incorrect.
+                    Let's get you back to ClearFlow.
+                </p>
+
+
+                <div class="error-actions-main">
+
+                    <a
+                        href="index.html"
+                        class="btn btn-primary">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Back to Home
+
+                    </a>
+
+
+                    <a
+                        href="contact.html"
+                        class="btn btn-outline">
+
+                        Contact Us
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+       
+
+    </main>
+
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

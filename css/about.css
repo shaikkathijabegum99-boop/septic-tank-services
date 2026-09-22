@@ -139,7 +139,9 @@
 .about-cta-actions .btn-outline{
     color:black;
 }
-
+.dark .btn-outline{
+    color:white;
+}
 .about-story {
     padding: 115px 0;
     background: var(--bg);
