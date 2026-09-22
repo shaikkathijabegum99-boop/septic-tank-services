@@ -944,7 +944,7 @@ body.light .blog-detail-cta-overlay{
         padding:80px 0 60px;
     }
 
-    .blog-detail-hero-overlay,
+   /* .blog-detail-hero-overlay,
     .blog-detail-cta-overlay{
         background:
             linear-gradient(
@@ -964,7 +964,7 @@ body.light .blog-detail-cta-overlay{
                 rgba(243,248,247,.82) 62%,
                 rgba(243,248,247,.98) 100%
             );
-    }
+    }*/
 
     .blog-detail-hero-image img,
     .blog-detail-cta-image img{
