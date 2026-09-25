@@ -62,7 +62,7 @@
     margin-top:30px;
 }
 
-.pricing-cta-actions .btn-outline{
+.pricing-cta-actions .btn-outline,.pricing-hero-actions .btn-outline{
     color:white;
 }
 .pricing-pumping{

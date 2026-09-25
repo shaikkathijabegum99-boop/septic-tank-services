@@ -220,14 +220,14 @@
 .booking-point strong{
     display:block;
     color:var(--text);
-    font-size:12px;
+    font-size:13px;
     line-height:1.3;
 }
 
 .booking-point p{
     margin:4px 0 0;
     color:var(--text-muted);
-    font-size:10px;
+    font-size:11px;
     line-height:1.6;
 }
 
