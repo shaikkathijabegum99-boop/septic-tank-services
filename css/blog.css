@@ -1206,8 +1206,7 @@ body.light .maintenance-cta-overlay{
     gap:11px;
     width:100%;
     max-width:280px;
-    margin:0 auto 14px;
-    padding:10px 12px;
+  
     border:1px solid transparent;
     border-radius:12px;
     color:var(--text-muted);

@@ -429,7 +429,7 @@
     margin:0 0 20px;
     color:#F4FBFA;
     font-family:var(--display);
-    font-size:clamp(2.2rem,4vw,3.6rem);
+    font-size:clamp(2.2rem,3.4vw,3.6rem);
     line-height:1.08;
     letter-spacing:-1.8px;
 }
