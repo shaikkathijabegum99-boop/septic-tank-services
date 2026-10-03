@@ -455,7 +455,7 @@ body[dir="rtl"] main .timeline-number {
 }
 
 
-/* Reverse the content sides in RTL */
+
 
 body[dir="rtl"] main .timeline-item:nth-child(odd) {
     justify-content: flex-end;
@@ -514,7 +514,7 @@ body[dir="rtl"] main .timeline-item:nth-child(even) {
         max-width: none;
     }
 
-    /* RTL TABLET */
+    
 
     body[dir="rtl"] main .timeline::before {
         left: auto;
@@ -609,7 +609,7 @@ body[dir="rtl"] main .timeline-item:nth-child(even) {
     }
 
 
-    /* RTL MOBILE */
+    
 
     body[dir="rtl"] main .timeline::before {
         left: auto;
@@ -2885,7 +2885,7 @@ body.light .about-cta-content p {
 }
 
 .about-hero-content h1 span {
-    color: var(--secondary);
+    color: var(--accent);
 }
 
 .about-hero-content > p {
@@ -3182,7 +3182,7 @@ body[dir="rtl"] .about-hero-content > p {
     overflow: hidden;
 }
 
-/* Keep content inside same page axis */
+
 .about-story > .wrap {
     width: 100%;
     max-width: 1280px;
@@ -3368,5 +3368,86 @@ body.light .timeline-content {
 
     .timeline-content {
         padding: 18px;
+    }
+}
+
+
+.about-hero-actions .btn-outline,
+.about-cta-actions .btn-outline {
+    color: #EAF7F5;
+    background: rgba(7, 26, 29, 0.82);
+    border: 1.5px solid rgba(20, 184, 166, 0.75);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.20);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+
+.about-hero-actions .btn-outline:hover,
+.about-cta-actions .btn-outline:hover {
+    color: #071A1D;
+    background: #EAF7F5;
+    border-color: #EAF7F5;
+    box-shadow: 0 10px 28px rgba(20, 184, 166, 0.20);
+}
+
+
+body.light .about-hero-actions .btn-outline {
+    color: #FFFFFF;
+    background: rgba(7, 26, 29, 0.88);
+    border-color: #45CFC0;
+}
+
+body.light .about-hero-actions .btn-outline:hover {
+    color: #071A1D;
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+
+body.light .about-cta-actions .btn-outline {
+    color: #071A1D;
+    background: #FFFFFF;
+    border-color: #18A999;
+    text-shadow: none;
+}
+
+body.light .about-cta-actions .btn-outline:hover {
+    color: #FFFFFF;
+    background: #087F73;
+    border-color: #087F73;
+}
+
+
+body.dark .about-hero-actions .btn-outline,
+body.dark .about-cta-actions .btn-outline {
+    color: #EAF7F5;
+    background: rgba(7, 26, 29, 0.88);
+    border-color: #18A999;
+}
+
+body.dark .about-hero-actions .btn-outline:hover,
+body.dark .about-cta-actions .btn-outline:hover {
+    color: #071A1D;
+    background: #EAF7F5;
+    border-color: #EAF7F5;
+}
+
+
+@media (max-width: 639px) {
+    .about-hero-actions .btn-outline,
+    .about-cta-actions .btn-outline {
+        min-height: 46px;
+        padding: 12px 20px;
+        font-size: 12px;
+        border-width: 1.5px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .about-hero-actions .btn-outline,
+    .about-cta-actions .btn-outline {
+        width: 100%;
+        min-height: 45px;
     }
 }

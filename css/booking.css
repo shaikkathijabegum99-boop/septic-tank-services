@@ -589,3 +589,26 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+
+.body.light .logo-mark {
+     background: linear-gradient(145deg, rgba(21, 156, 141, .13), rgba(21, 156, 141, .04)); 
+     border-color: rgba(21, 156, 141, .25); 
+     color: #159C8D; 
+     box-shadow: 0 6px 18px rgba(7, 26, 29, .10), inset 0 1px 0 rgba(255, 255, 255, .8); 
+}
+.booking-logo-mark {
+    
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: linear-gradient(145deg, rgba(24, 169, 153, .20), rgba(24, 169, 153, .06));
+    border: 1px solid rgba(24, 169, 153, .30);
+    color: var(--secondary, #18A999);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .18), inset 0 1px 0 rgba(255, 255, 255, .06);
+    overflow: hidden;
+    transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
+}

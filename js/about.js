@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* Run once */
+    
 
     syncRTL();
 
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateTimelineDirection();
 
 
-    /* Update timeline whenever body dir changes */
+    
 
     const timelineDirectionObserver =
         new MutationObserver(function () {
